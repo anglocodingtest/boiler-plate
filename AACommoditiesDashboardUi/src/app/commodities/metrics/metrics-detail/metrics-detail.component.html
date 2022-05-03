@@ -1,0 +1,18 @@
+<p *ngIf="!model">No matching model</p>
+<div *ngIf="model">
+    <mat-card class="example-card">
+        <mat-card-title>{{model.modelName}} </mat-card-title>
+        <mat-card-subtitle>{{model.commodityName}}</mat-card-subtitle>
+        <mat-card-content>
+            <div><span>Id: </span>{{model.id}}</div>
+            <div><span>Position: </span>{{model.position}}</div>
+            <div><span>PnLDaily: </span>{{model.pnLDaily | currency:'GBP':'symbol-narrow':'4.2-2'}}</div>
+            <div><span>Var Allocation: </span>{{model.varAllocation | currency:'GBP':'symbol-narrow':'4.2-2'}}</div>
+            <div><span>Price: </span>{{model.price | currency:'GBP':'symbol-narrow':'4.2-2'}}</div>
+            <div><span>Price: </span>{{model.pnlLTD | currency:'GBP':'symbol-narrow':'4.2-2'}}</div>
+        </mat-card-content>
+      </mat-card>
+</div>
+
+
+

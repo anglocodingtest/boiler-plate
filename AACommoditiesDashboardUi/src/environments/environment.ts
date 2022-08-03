@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  commoditiesApi: ''
+  commoditiesApi: 'http://localhost:5279/Commodities'
 };

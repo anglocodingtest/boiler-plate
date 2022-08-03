@@ -1,0 +1,47 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/Highlighting/AnalysisEnabled/@EntryValue">SOLUTION</s:String>
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a68159d2_002D8844_002D40f0_002Dbe24_002D536e90a1fc97/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;And&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;MSTest::3FBEAEC0-4085-4D4A-8DBD-AC35E65C1046::net6.0::AA.CommoditiesDashboard.Api.Tests.ControllersTests.CommoditiesControllerTests&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+      &lt;Project Location="C:\Work\AngloCodingTest\AA.CommoditiesDashboard.Api\AA.CommoditiesDashboard.Api.Tests" Presentation="&amp;lt;AA.CommoditiesDashboard.Api.Tests&amp;gt;" /&gt;&#xD;
+    &lt;/And&gt;&#xD;
+    &lt;And&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;MSTest::351EEB6C-CC73-4782-862A-FA7C247BC1C5::net6.0::AA.CommoditiesDashboard.Service.Tests.CommoditiesServiceTests.GetChartDetailTests&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+      &lt;Project Location="C:\Work\AngloCodingTest\AA.CommoditiesDashboard.Api\AA.CommoditiesDashboard.Service.Tests" Presentation="&amp;lt;AA.CommoditiesDashboard.Service.Tests&amp;gt;" /&gt;&#xD;
+    &lt;/And&gt;&#xD;
+    &lt;And&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;MSTest::351EEB6C-CC73-4782-862A-FA7C247BC1C5::net6.0::AA.CommoditiesDashboard.Service.Tests.CommoditiesServiceTests.GetCommoditiesTests&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+      &lt;Project Location="C:\Work\AngloCodingTest\AA.CommoditiesDashboard.Api\AA.CommoditiesDashboard.Service.Tests" Presentation="&amp;lt;AA.CommoditiesDashboard.Service.Tests&amp;gt;" /&gt;&#xD;
+    &lt;/And&gt;&#xD;
+    &lt;And&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;MSTest::351EEB6C-CC73-4782-862A-FA7C247BC1C5::net6.0::AA.CommoditiesDashboard.Service.Tests.CommoditiesServiceTests.GetCommoditySummaryTests&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+      &lt;Project Location="C:\Work\AngloCodingTest\AA.CommoditiesDashboard.Api\AA.CommoditiesDashboard.Service.Tests" Presentation="&amp;lt;AA.CommoditiesDashboard.Service.Tests&amp;gt;" /&gt;&#xD;
+    &lt;/And&gt;&#xD;
+    &lt;And&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;MSTest::351EEB6C-CC73-4782-862A-FA7C247BC1C5::net6.0::AA.CommoditiesDashboard.Service.Tests.CommoditiesServiceTests.GetModelsTests&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+      &lt;Project Location="C:\Work\AngloCodingTest\AA.CommoditiesDashboard.Api\AA.CommoditiesDashboard.Service.Tests" Presentation="&amp;lt;AA.CommoditiesDashboard.Service.Tests&amp;gt;" /&gt;&#xD;
+    &lt;/And&gt;&#xD;
+    &lt;And&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;MSTest::351EEB6C-CC73-4782-862A-FA7C247BC1C5::net6.0::AA.CommoditiesDashboard.Service.Tests.CommoditiesServiceTests.GetTradeActionHistoryTests&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+      &lt;Project Location="C:\Work\AngloCodingTest\AA.CommoditiesDashboard.Api\AA.CommoditiesDashboard.Service.Tests" Presentation="&amp;lt;AA.CommoditiesDashboard.Service.Tests&amp;gt;" /&gt;&#xD;
+    &lt;/And&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	
+	
+	
+	</wpf:ResourceDictionary>

@@ -1,0 +1,67 @@
+<mat-card>
+    <mat-card-title>Key Metrics</mat-card-title>  
+    <P></P>
+    <mat-card-content>
+        <div> 
+            <mat-form-field appearance="fill">
+                <mat-label>Model</mat-label>
+                <mat-select (selectionChange)="onModelChanged($event.value)">
+                    <mat-option value="-1">None</mat-option>
+                    <mat-option *ngFor="let model of models$ | async" [value]="model.id">
+                        {{model.name}}
+                    </mat-option>
+                    </mat-select>
+            </mat-form-field>  
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Commodity</mat-label>
+                <mat-select (selectionChange)="onCommodityChanged($event.value)">
+                <mat-option value="-1">None</mat-option>
+                <mat-option *ngFor="let commodity of commodities$ | async" [value]="commodity.id">
+                    {{commodity.name}}
+                </mat-option>
+                </mat-select>
+            </mat-form-field>      
+        </div>
+    </mat-card-content>
+</mat-card>     
+
+<div *ngIf="summaryData$ | async as selectedSummary">
+    <mat-card>                
+        <mat-card-title>{{selectedSummary.commodityName}} - {{selectedSummary.modelName}}</mat-card-title>
+                <mat-card-content>
+                <div mat-line><b>Date:</b> {{selectedSummary.date | date : 'dd/MM/yyyy'}} </div>
+                <div mat-line><b>Position:</b>  {{selectedSummary.position}} </div>
+                <div mat-line><b>PnL Cuttent:</b> {{selectedSummary.pnlCurrent}}</div>
+                <div mat-line><b>Price:</b> {{selectedSummary.price}} </div>
+                <div mat-line><b>PnL Ltd:</b> {{selectedSummary.pnlLtd}}</div>
+                <div *ngIf='selectedSummary.yearSummaries.length'>
+                <mat-card>  
+                    <mat-card-content>
+                        <table class="table table-sm table-bordered table-striped ">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Year</th>
+                                    <th>PnlYtd</th>
+                                    <th>DrawdownYtd</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor='let yearSummary of selectedSummary.yearSummaries'>
+                                    <td>{{yearSummary.year}}</td>
+                                    <td>{{yearSummary.pnlYtd}}</td>
+                                    <td>{{yearSummary.drawdownYtd}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </mat-card-content>
+                </mat-card> 
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
+<div class="alert alert-danger"
+     *ngIf="errorMessage$ | async as errorMessage">
+  {{ errorMessage }}
+</div>

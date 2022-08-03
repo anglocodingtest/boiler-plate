@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-title>Trade Actions</mat-card-title> 
+    <P></P>
+    <mat-card-content>
+        <div class="alert alert-danger"
+            *ngIf="errorMessage$ | async as errorMessage">
+        {{ errorMessage }}
+        </div>
+        
+        <div *ngIf="tradeActions$ | async as tradeActions" class="grid-container">
+            <ag-grid-angular
+                style="width: 900px; height: 700px;"
+                class="ag-theme-alpine"
+                [rowData]="tradeActions"
+                [columnDefs]="columnDefs">
+            </ag-grid-angular>  
+        </div>
+    </mat-card-content>
+</mat-card>

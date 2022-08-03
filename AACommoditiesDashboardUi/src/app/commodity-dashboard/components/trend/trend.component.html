@@ -1,0 +1,33 @@
+<mat-card> 
+    <mat-card-title>Trend</mat-card-title> 
+    <P></P>
+    <mat-card-content>
+        <div> 
+            <mat-form-field appearance="fill">
+                <mat-label>Model</mat-label>
+                <mat-select (selectionChange)="onModelChanged($event.value)">
+                    <mat-option value="-1">None</mat-option>
+                    <mat-option *ngFor="let model of models$ | async" [value]="model.id">
+                        {{model.name}}
+                    </mat-option>
+                    </mat-select>
+            </mat-form-field>  
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Commodity</mat-label>
+                <mat-select (selectionChange)="onCommodityChanged($event.value)">
+                <mat-option value="-1">None</mat-option>
+                <mat-option *ngFor="let commodity of commodities$ | async" [value]="commodity.id">
+                    {{commodity.name}}
+                </mat-option>
+                </mat-select>
+            </mat-form-field>      
+        </div>
+    </mat-card-content>
+</mat-card>
+<div class="alert alert-danger"
+     *ngIf="errorMessage$ | async as errorMessage">
+  {{ errorMessage }}
+</div>
+<div *ngIf="(changed$ | async)" id="container"></div>

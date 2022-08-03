@@ -1,20 +1,42 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
+using AA.CommoditiesDashboard.Data;
+using AA.CommoditiesDashboard.Service;
+using Microsoft.EntityFrameworkCore;
 
-namespace AA.CommoditiesDashboard.Api
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<AnalyticsDashboardDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("AnalyticsDashboard")));
+
+builder.Services.AddScoped<ICommoditiesService, CommoditiesService>();
+
+var app = builder.Build();
+
+using var scope = app.Services.CreateAsyncScope();
+var dbContext = scope.ServiceProvider.GetRequiredService<AnalyticsDashboardDbContext>();
+dbContext.Database.EnsureCreated();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
 {
-    public static class Program
-    {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
-
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
+
+app.UseCors(option =>
+    option
+        .WithOrigins("http://localhost:4200")
+        .WithMethods("GET", "POST", "PUT")
+        .AllowAnyHeader()
+    );
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
